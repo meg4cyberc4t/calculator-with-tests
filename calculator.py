@@ -1,3 +1,6 @@
+from typing import Union
+
+
 class Calculator:
     @staticmethod
     def addition(x: float, y: float) -> float:
@@ -8,7 +11,9 @@ class Calculator:
         return x - y
 
     @staticmethod
-    def division(x: float, y: float) -> float:
+    def division(x: float, y: float) -> Union[str, float]:
+        if y == 0:
+            return "error"
         return x / y
 
     @staticmethod

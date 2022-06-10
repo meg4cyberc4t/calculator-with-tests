@@ -14,6 +14,7 @@ def test_subtraction():
 
 def test_division():
     assert calculator.division(9, 3) == 3
+    assert calculator.division(9, 0) == "error"
 
 
 def test_multiplication():
